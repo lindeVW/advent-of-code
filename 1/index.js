@@ -5,22 +5,22 @@
       // const measurements = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
 
       // PART 1
-      const total = countIncreases(measurements)
-      console.log('PART 1: ', total)
+      const increases = countIncreases(measurements)
+      console.log('PART 1: ', increases)
 
       // PART 2
-      const windows = []
+      const groups = []
       for (let i = 0; i < measurements.length - 2; i++) {
-        windows.push(measurements[i] + measurements[i + 1] + measurements[i + 2])
+        groups.push(measurements[i] + measurements[i + 1] + measurements[i + 2])
       }
-      const windowsIncreases = countIncreases(windows)
-      console.log('PART 2: ', windowsIncreases)
+      const groupIncreases = countIncreases(groups)
+      console.log('PART 2: ', groupIncreases)
     })
   }
 
   const countIncreases = measurements => {
-    return measurements.reduce((total, value, index, array) => {
-      return array[index] > array[index - 1] ? total + 1 : total
+    return measurements.reduce((total, current, index, array) => {
+      return current > array[index - 1] ? total + 1 : total
     }, 0)
   }
 
