@@ -1,0 +1,27 @@
+html {
+    font-family: 'Open Sans';
+    color: #14121C;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section pre {
+    padding: 20px 32px;
+    background-color: #E9EEF2;
+    cursor: copy;
+    cursor: url(../copy.svg), copy;
+}
