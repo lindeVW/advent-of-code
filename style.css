@@ -42,3 +42,27 @@ section pre {
 .row .pixel.lit {
     background-color: #14121C;
 }
+
+.row .pixel.range {
+    --background: #14121C;
+    background-color: var(--background);
+    border: none;
+}
+
+
+.row .pixel.marked {
+    position: relative;
+}
+
+.row .pixel.marked::before {
+    content: '';
+    position: absolute;
+    inset: calc(50% - 1px);
+
+    background-color: #14121C;
+    border-radius: 50%;
+}
+
+.row .pixel.big::before {
+    inset: calc(50% - 3px);
+}
