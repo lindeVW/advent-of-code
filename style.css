@@ -25,3 +25,20 @@ section pre {
     cursor: copy;
     cursor: url(../copy.svg), copy;
 }
+
+/* Day 10 display styling */
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.row .pixel {
+    flex: 1 0 0%;
+    aspect-ratio: 1 / 1;
+    background-color: #E9EEF2;
+    border: thin solid white;
+}
+
+.row .pixel.lit {
+    background-color: #14121C;
+}
