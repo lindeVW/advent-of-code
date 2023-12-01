@@ -1,16 +1,11 @@
 {
   const init = () => {
     window.fetch('./data.txt').then(data => data.text()).then(data => {
-      const elves = data.split('\n\n').map(elf => elf.split('\n').map(calories => +calories))
-      const totals = elves.map(elf => elf.reduce((total, current) => total + current))
+      const data = data.split('\n').map(item => item)
 
       // PART 1
-      const max = totals.reduce((max, current) => current > max ? current : max, 0)
-      output(1, max)
 
       // PART 2
-      const topThreeTotal = totals.sort((a, b) => b - a).slice(0, 3).reduce((total, current) => total + current, 0)
-      output(2, topThreeTotal)
     })
   }
 
