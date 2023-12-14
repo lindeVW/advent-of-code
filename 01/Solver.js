@@ -1,6 +1,6 @@
 import { AdventOfCode } from "../AdventOfCode.js";
 
-export class DayOne extends AdventOfCode {
+export class Solver extends AdventOfCode {
 	static strDigits = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
 	constructor(data) {
@@ -25,9 +25,9 @@ export class DayOne extends AdventOfCode {
 
 	getCalibrationTotalWithStrings() {
 		const numbers = this.data.map(line => {
-			const regex = new RegExp(DayOne.strDigits.join('|') + '|\\d');
+			const regex = new RegExp(Solver.strDigits.join('|') + '|\\d');
 			const firstDigit = line.match(regex)[0];
-			const regexReverse = new RegExp(DayOne.strDigits.map(str => str.split('').reverse().join('')).join('|') + '|\\d');
+			const regexReverse = new RegExp(Solver.strDigits.map(str => str.split('').reverse().join('')).join('|') + '|\\d');
 			const lastDigit = line.split('').reverse().join('').match(regexReverse)[0].split('').reverse().join('');
 			return +(this.parseDigit(firstDigit) + this.parseDigit(lastDigit));
 		})
@@ -35,7 +35,7 @@ export class DayOne extends AdventOfCode {
 	}
 
 	parseDigit(digit) {
-		const value = DayOne.strDigits.indexOf(digit);
+		const value = Solver.strDigits.indexOf(digit);
 		if (value >= 0) {
 			return `${value + 1}`;
 		}

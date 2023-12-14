@@ -1,6 +1,6 @@
 import { AdventOfCode } from "../AdventOfCode.js";
 
-export class DayFive extends AdventOfCode {
+export class Solver extends AdventOfCode {
 	constructor(data) {
 		super(5, data)
 		this.data = data // Work with the source string to more easily find start and end of maps

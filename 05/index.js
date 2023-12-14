@@ -1,11 +1,11 @@
-import { DayFive } from './DayFive.js'
+import { Solver } from './Solver.js'
 
 {
 	const init = () => {
 	  window.fetch('./example.txt')
 		.then(rawData => rawData.text())
 		.then(data => {
-			const solver = new DayFive(data)
+			const solver = new Solver(data)
 
 			// PART 1
 			const lowestLocation = solver.lowest(solver.seedsList.map(seed => solver.parseSeed(seed)))

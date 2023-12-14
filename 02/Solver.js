@@ -1,6 +1,6 @@
 import { AdventOfCode } from "../AdventOfCode.js";
 
-export class DayTwo extends AdventOfCode {
+export class Solver extends AdventOfCode {
 	static R_LIMIT = 12;
 	static G_LIMIT = 13;
 	static B_LIMIT = 14;
@@ -33,7 +33,7 @@ export class DayTwo extends AdventOfCode {
 		return this.data.reduce((total, gameStr, index) => {
 			const turns = this.parseTurns(gameStr)
 	
-			const impossibleTurns = turns.filter((turn) => turn.R > DayTwo.R_LIMIT || turn.G > DayTwo.G_LIMIT || turn.B > DayTwo.B_LIMIT);
+			const impossibleTurns = turns.filter((turn) => turn.R > Solver.R_LIMIT || turn.G > Solver.G_LIMIT || turn.B > Solver.B_LIMIT);
 			
 			if (impossibleTurns.length === 0) {
 				return total + index + 1;

@@ -1,6 +1,6 @@
 import { AdventOfCode } from "../AdventOfCode.js";
 
-export class DayFour extends AdventOfCode {
+export class Solver extends AdventOfCode {
 	constructor(data) {
 		super(4, data)
 		this.data = this.data
